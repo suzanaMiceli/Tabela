@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lista</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1 class="titulo">Desafio e-core</h1>
+    </div>
+  </header>
+  <main>
+    <section class="container">
+      <h2>Lista de Pessoas</h2>
+      <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome para buscar" class= "campo campo-medio">
+      <table id = "tabela">
+        <thead>
+          <tr>
+            <th>Nome <button id="ordernar" class="botao-filtro" onclick="sortTable(0)"><img src="./filtro1.png" class="imagem-filtro"></button></th>
+            <th>Idade<button id="ordernar2" class="botao-filtro" onclick="Filtra(0)"><img src="./filtro1.png" class ="imagem-filtro"></button></th>
+            <th>Classificação</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-pessoas">
+          <tr class="pessoa" id="primeira-pessoa">
+            <td class="info-nome">Paulo</td>
+            <td class="info-idade">68</td>
+            <td class="info-classificacao">Idoso</td>
+          </tr>
+          <tr class="pessoa" >
+            <td class="info-nome">Maria</td>
+            <td class="info-idade">30</td>
+            <td class="info-classificacao">Adulto</td>
+          </tr>
+          <tr class="pessoa">
+            <td class="info-nome">João</td>
+            <td class="info-idade">17</td>
+            <td class="info-classificacao">Adolescente</td>
+          </tr>
+          <tr class="pessoa">
+            <td class="info-nome">Ana Clara</td>
+            <td class="info-idade">10</td>
+            <td class="info-classificacao">Criança</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <section  class="container">
+    <h2 id="titulo-form">Adicionar pessoa</h2>
+    <form id= "form-adiciona">
+      <div class= "grupo">
+        <label for="nome">Nome:</label>
+        <input type="text" id= "nome" name="nome" placeholder="Digite o nome" class="campo campo-medio">
+      </div>
+      <div class="grupo">
+        <label for="idade">Idade:</label>
+        <input type="text" id="idade" name="idade" placeholder="Digite a idade" class="campo campo-medio">
+      </div>
+      <button id="adicionar-pessoa" class="bto-principal">Adicionar</button>
+    </form>
+
+  </section>
+  <script src="./javascript/formulario.js"></script>
+  <script src="./javascript/filtro.js"></script>
+</body>
+
+</html>
